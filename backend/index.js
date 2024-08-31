@@ -25,7 +25,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 const corsOption = {
-  origin: "https://twitterclone-umber-sigma.vercel.app/",
+  origin: "https://twitterclone-umber-sigma.vercel.app",
   methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
