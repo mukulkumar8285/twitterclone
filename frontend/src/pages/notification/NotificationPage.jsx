@@ -14,7 +14,7 @@ const NotificationPage = () => {
 		queryKey: ["notifications"],
 		queryFn: async () => {
 			try {
-				const res = await fetch("http://localhost:8080/api/notifications" , {
+				const res = await fetch("https://twitterclone-backend-iota.vercel.app/api/notifications" , {
 					credentials : "include"
 				});
 				const data = await res.json();
