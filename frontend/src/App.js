@@ -20,7 +20,7 @@ function App() {
     const { data: authUser, isLoading } = useQuery({
         queryKey: ["authUser"],
         queryFn: async () => {
-            const res = await fetch("http://localhost:8080/api/auth/me", {
+            const res = await fetch("https://twitterclone-backend-iota.vercel.app/api/auth/me", {
                 credentials: "include",
             });
             const data = await res.json();
