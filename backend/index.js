@@ -22,7 +22,7 @@ cloudinary.config({
 });
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 8080 || 5000;
 const __dirname = path.resolve();
 const corsOption = {
   origin: "https://twitterclone-umber-sigma.vercel.app",
@@ -51,7 +51,7 @@ app.get("/",(req,res)=>{
     massage:"working",
   });
 })
-if (process.env.NODE_ENV === "production") {
+if ("development" === "production") {
 	app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 	app.get("*", (req, res) => {
