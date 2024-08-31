@@ -24,11 +24,17 @@ cloudinary.config({
 const app = express();
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
+const corsOption = {
+  origin: "https://twitterclone-umber-sigma.vercel.app/",
+  methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+};
 
-app.use(cors({
-	origin: ['http://localhost:3000', 'http://localhost:3001'],
-	credentials: true,
-}))
+app.use(cors(corsOption));
+app.options("*", cors(corsOption));
 app.use(express.json({ limit: "5mb" })); // to parse req.body
 // limit shouldn't be too high to prevent DOS
 app.use(express.urlencoded({ extended: true })); // to parse form data(urlencoded)
