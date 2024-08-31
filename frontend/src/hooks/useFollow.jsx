@@ -8,7 +8,7 @@ const useFollow = () => {
 	const { mutate: follow, isPending } = useMutation({
 		mutationFn: async (userId) => {
 			try {
-				const res = await fetch(`http://localhost:8080/api/users/follow/${userId}`, {
+				const res = await fetch(`https://twitterclone-backend-iota.vercel.app/api/users/follow/${userId}`, {
 					method: "POST",
 					credentials:"include"
 				});
