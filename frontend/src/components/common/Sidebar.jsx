@@ -15,7 +15,7 @@ const Sidebar = () => {
 	const { mutate: logout } = useMutation({
 		mutationFn: async () => {
 			try {
-				const res = await fetch("http://localhost:8080/api/auth/logout", {
+				const res = await fetch("https://twitterclone-backend-iota.vercel.app/api/auth/logout", {
 					method: "POST",
 					credentials:"include"
 				});
