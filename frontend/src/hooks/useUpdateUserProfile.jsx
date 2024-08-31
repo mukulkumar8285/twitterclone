@@ -8,7 +8,7 @@ const useUpdateUserProfile = () => {
 	const { mutateAsync: updateProfile, isPending: isUpdatingProfile } = useMutation({
 		mutationFn: async (formData) => {
 			try {
-				const res = await fetch(`http://localhost:8080/api/users/update`, {
+				const res = await fetch(`https://twitterclone-backend-iota.vercel.app/api/users/update`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
