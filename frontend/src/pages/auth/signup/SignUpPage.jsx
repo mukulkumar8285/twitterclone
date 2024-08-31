@@ -25,7 +25,7 @@ const SignUpPage = () => {
 	const { mutate, isError, isPending, error } = useMutation({
 		mutationFn: async ({ email, username, fullName, password }) => {
 			try {
-				const res = await fetch("http://localhost:8080/api/auth/signup", {
+				const res = await fetch("https://twitterclone-backend-iota.vercel.app/api/auth/signup", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
