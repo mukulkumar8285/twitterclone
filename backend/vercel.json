@@ -8,15 +8,75 @@
   ],
   "routes": [
     {
-      "src": "/api/v1/user/register",
+      "src": "/api/auth/me",
+      "dest": "/"
+    },
+     {
+      "src": "/api/auth/signup",
+      "dest": "/"
+    },
+     {
+      "src": "/api/auth/login",
       "dest": "/"
     },
     {
-      "src": "/api/v1/user/login",
+      "src": "/api/auth/logout",
+      "dest": "/"
+    },
+     {
+      "src": "/api/users/profile/:username",
       "dest": "/"
     },
     {
-      "src": "/api/v1/user/logout",
+      "src": "/api/users/suggested",
+      "dest": "/"
+    },
+    {
+      "src": "/api/users/follow/:id",
+      "dest": "/"
+    },
+    {
+      "src": "/api/users/update",
+      "dest": "/"
+    },
+    {
+      "src": "/api/posts/all",
+      "dest": "/"
+    },
+    {
+      "src": "/api/posts/following",
+      "dest": "/"
+    },
+     {
+      "src": "/api/posts/likes/:id",
+      "dest": "/"
+    },
+     {
+      "src": "/api/posts/user/:username",
+      "dest": "/"
+    },
+     {
+      "src": "/api/posts/create",
+      "dest": "/"
+    },
+     {
+      "src": "/api/posts/like/:id",
+      "dest": "/"
+    },
+     {
+      "src": "/api/posts/comment/:id",
+      "dest": "/"
+    },
+     {
+      "src": "/api/posts/:id",
+      "dest": "/"
+    },
+    {
+      "src": "/api/notifications/",
+      "dest": "/"
+    },
+    {
+      "src": "/api/notifications/",
       "dest": "/"
     }
   ]
