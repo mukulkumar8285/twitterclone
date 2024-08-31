@@ -27,10 +27,7 @@ const __dirname = path.resolve();
 const corsOption = {
   origin: "https://twitterclone-umber-sigma.vercel.app",
   methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
-  preflightContinue: false,
-  optionsSuccessStatus: 204
 };
 
 app.use(cors(corsOption));
