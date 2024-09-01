@@ -75,5 +75,11 @@
       "src": "/api/notifications/",
       "dest": "/api/notifications/index.js"
     }
-  ]
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 30
+    }
+  }
+}
 }
