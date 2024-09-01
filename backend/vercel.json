@@ -6,6 +6,14 @@
       "use": "@vercel/node"
     }
   ],
+  "functions": {
+    "api/users/**/*.js": {
+      "maxDuration": 30
+    },
+    "api/auth/**/*.js": {
+      "maxDuration": 30
+    }
+  },
   "routes": [
     {
       "src": "/api/auth/me",
@@ -75,10 +83,5 @@
       "src": "/api/notifications/",
       "dest": "/api/notifications/index.js"
     }
-  ],
-  "functions": {
-    "api/**/*.js": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
