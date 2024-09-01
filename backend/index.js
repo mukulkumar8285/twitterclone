@@ -49,11 +49,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/notifications", notificationRoutes);
 
-app.get("/",(req,res)=>{
-  res.json({
-    massage:"working",
-  });
-})
+
 if ("development" === "production") {
 	app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
