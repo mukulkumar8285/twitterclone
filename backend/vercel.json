@@ -2,79 +2,78 @@
   "version": 2,
   "builds": [
     {
+      "src": "api/**/*.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/auth/me",
-      "dest": "/routers/authroute.js"
+      "dest": "/api/auth/me.js"
     },
     {
       "src": "/api/auth/signup",
-      "dest": "/routers/authroute.js"
+      "dest": "/api/auth/signup.js"
     },
     {
       "src": "/api/auth/login",
-      "dest": "/routers/authroute.js"
+      "dest": "/api/auth/login.js"
     },
     {
       "src": "/api/auth/logout",
-      "dest": "/routers/authroute.js"
+      "dest": "/api/auth/logout.js"
     },
     {
       "src": "/api/users/profile/:username",
-      "dest": "/routers/userroute.js"
+      "dest": "/api/users/profile.js"
     },
     {
       "src": "/api/users/suggested",
-      "dest": "/routers/userroute.js"
+      "dest": "/api/users/suggested.js"
     },
     {
       "src": "/api/users/follow/:id",
-      "dest": "/routers/userroute.js"
+      "dest": "/api/users/follow.js"
     },
     {
       "src": "/api/users/update",
-      "dest": "/routers/userroute.js"
+      "dest": "/api/users/update.js"
     },
     {
       "src": "/api/posts/all",
-      "dest": "/routers/postroute.js"
+      "dest": "/api/posts/all.js"
     },
     {
       "src": "/api/posts/following",
-      "dest": "/routers/postroute.js"
+      "dest": "/api/posts/following.js"
     },
     {
       "src": "/api/posts/likes/:id",
-      "dest": "/routers/postroute.js"
+      "dest": "/api/posts/likes.js"
     },
     {
       "src": "/api/posts/user/:username",
-      "dest": "/routers/postroute.js"
+      "dest": "/api/posts/user.js"
     },
     {
       "src": "/api/posts/create",
-      "dest": "/routers/postroute.js"
+      "dest": "/api/posts/create.js"
     },
     {
       "src": "/api/posts/like/:id",
-      "dest": "/routers/postroute.js"
+      "dest": "/api/posts/like.js"
     },
     {
       "src": "/api/posts/comment/:id",
-      "dest": "/routers/postroute.js"
+      "dest": "/api/posts/comment.js"
     },
     {
       "src": "/api/posts/:id",
-      "dest": "/routers/postroute.js"
+      "dest": "/api/posts/id.js"
     },
     {
       "src": "/api/notifications/",
-      "dest": "/routers/notification.js"
+      "dest": "/api/notifications/index.js"
     }
-    
-  ],
- 
+  ]
 }
