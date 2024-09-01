@@ -9,72 +9,73 @@
   "routes": [
     {
       "src": "/api/auth/me",
-      "dest": "/api/auth/me.js"
+      "dest": "/routers/authroute.js"
     },
     {
       "src": "/api/auth/signup",
-      "dest": "/api/auth/signup.js"
+      "dest": "/routers/authroute.js"
     },
     {
       "src": "/api/auth/login",
-      "dest": "/api/auth/login.js"
+      "dest": "/routers/authroute.js"
     },
     {
       "src": "/api/auth/logout",
-      "dest": "/api/auth/logout.js"
+      "dest": "/routers/authroute.js"
     },
     {
       "src": "/api/users/profile/:username",
-      "dest": "/api/users/profile.js"
+      "dest": "/routers/userroute.js"
     },
     {
       "src": "/api/users/suggested",
-      "dest": "/api/users/suggested.js"
+      "dest": "/routers/userroute.js"
     },
     {
       "src": "/api/users/follow/:id",
-      "dest": "/api/users/follow.js"
+      "dest": "/routers/userroute.js"
     },
     {
       "src": "/api/users/update",
-      "dest": "/api/users/update.js"
+      "dest": "/routers/userroute.js"
     },
     {
       "src": "/api/posts/all",
-      "dest": "/api/posts/all.js"
+      "dest": "/routers/postroute.js"
     },
     {
       "src": "/api/posts/following",
-      "dest": "/api/posts/following.js"
+      "dest": "/routers/postroute.js"
     },
     {
       "src": "/api/posts/likes/:id",
-      "dest": "/api/posts/likes.js"
+      "dest": "/routers/postroute.js"
     },
     {
       "src": "/api/posts/user/:username",
-      "dest": "/api/posts/user.js"
+      "dest": "/routers/postroute.js"
     },
     {
       "src": "/api/posts/create",
-      "dest": "/api/posts/create.js"
+      "dest": "/routers/postroute.js"
     },
     {
       "src": "/api/posts/like/:id",
-      "dest": "/api/posts/like.js"
+      "dest": "/routers/postroute.js"
     },
     {
       "src": "/api/posts/comment/:id",
-      "dest": "/api/posts/comment.js"
+      "dest": "/routers/postroute.js"
     },
     {
       "src": "/api/posts/:id",
-      "dest": "/api/posts/id.js"
+      "dest": "/routers/postroute.js"
     },
     {
       "src": "/api/notifications/",
-      "dest": "/api/notifications/index.js"
+      "dest": "/routers/notification.js"
     }
+    
   ],
   "functions": {
     "api/**/*.js": {
