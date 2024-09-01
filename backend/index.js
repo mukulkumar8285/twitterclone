@@ -25,7 +25,7 @@ const app = express();
 const PORT = 8080 || 5000;
 const __dirname = path.resolve();
 const corsOption = {
-  origin: "https://twitterclone-umber-sigma.vercel.app",
+  origin: true,
   methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
 };
