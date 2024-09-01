@@ -9,26 +9,28 @@
   "routes": [
     {
       "src": "/api/auth/(.*)",
-      "dest": "/api/authroute.js"
+      "dest": "/routers/authroute.js"
     },
     {
       "src": "/api/users/(.*)",
-      "dest": "/api/userroute.js"
+      "dest": "/routers/userroute.js"
     },
     {
       "src": "/api/posts/(.*)",
-      "dest": "/api/postroute.js"
+      "dest": "/routers/postroute.js"
     },
     {
       "src": "/api/notifications/(.*)",
-      "dest": "/api/notification.js"
+      "dest": "/routers/notification.js"
     },
     {
       "src": "/(.*)",
       "dest": "/index.js"
     }
   ],
-  
-  
+  "functions": {
+    "index.js": {
+      "maxDuration": 30
+    }
+  }
 }
-
