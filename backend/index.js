@@ -31,7 +31,13 @@ const corsOption = {
 };
 
 app.use(cors(corsOption));
-app.options("*", cors(corsOption));
+//app.options("*", cors(corsOption));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://twitterclone-umber-sigma.vercel.app"); // Update with your frontend URL
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
 app.use(express.json({ limit: "5mb" })); // to parse req.body
 // limit shouldn't be too high to prevent DOS
 app.use(express.urlencoded({ extended: true })); // to parse form data(urlencoded)
