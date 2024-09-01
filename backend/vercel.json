@@ -2,78 +2,36 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/**/*.js",
+      "src": "index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/auth/me",
-      "dest": "/"
+      "src": "/api/auth/(.*)",
+      "dest": "/api/authroute.js"
     },
     {
-      "src": "/api/auth/signup",
-      "dest": "/"
+      "src": "/api/users/(.*)",
+      "dest": "/api/userroute.js"
     },
     {
-      "src": "/api/auth/login",
-      "dest": "/"
+      "src": "/api/posts/(.*)",
+      "dest": "/api/postroute.js"
     },
     {
-      "src": "/api/auth/logout",
-      "dest": "/api/auth/logout.js"
+      "src": "/api/notifications/(.*)",
+      "dest": "/api/notification.js"
     },
     {
-      "src": "/api/users/profile/:username",
-     "dest": "/"
-    },
-    {
-      "src": "/api/users/suggested",
-      "dest": "/"
-    },
-    {
-      "src": "/api/users/follow/:id",
-      "dest": "/"
-    },
-    {
-      "src": "/api/users/update",
-      "dest": "/"
-    },
-    {
-      "src": "/api/posts/all",
-      "dest": "/"
-    },
-    {
-      "src": "/api/posts/following",
-      "dest": "/"
-    },
-    {
-      "src": "/api/posts/likes/:id",
-      "dest": "/"
-    },
-    {
-      "src": "/api/posts/user/:username",
-      "dest": "/"
-    },
-    {
-      "src": "/api/posts/create",
-     "dest": "/"
-    },
-    {
-      "src": "/api/posts/like/:id",
-     "dest": "/"
-    },
-    {
-      "src": "/api/posts/comment/:id",
-      "dest": "/"
-    },
-    {
-      "src": "/api/posts/:id",
-      "dest": "/"
-    },
-    {
-      "src": "/api/notifications/",
-     "dest": "/"
+      "src": "/(.*)",
+      "dest": "/index.js"
     }
-  ]
+  ],
+  "functions": {
+    "index.js": {
+      "maxDuration": 30
+    }
+  }
 }
+give me a file struction accodring to vercel my write api in dext
